@@ -15,9 +15,18 @@ linear 스타일의 heatmap 으로 수정된 k6 대시보드가 자동 등록되
 
 ## Getting Start
 
-InfluxDB 및 Grafana 컨테이너 생성
+Clone 없이 k6-stack 디렉토리만 바로 설치(선택):
 
 ```bash
+curl -L https://github.com/JiHongKim98/k6-stack-boilerplate/archive/refs/heads/main.tar.gz \
+  | tar -xz --strip-components=1 "k6-stack-boilerplate-main/k6-stack"
+```
+
+InfluxDB 및 Grafana 컨테이너 생성:
+
+```bash
+cd k6-stack/
+
 # InfluxDB 와 Grafana 컨테이너를 생성합니다.
 docker-compose up -d
 ```
